@@ -34,5 +34,5 @@ jobs:
         with:
           name: MyProjectArtifacts
           path: |
-            D:\a\DotnetProj1\DotnetProj1\bin  # Adjust this path to your build output directory
+            D:\a\DotnetProj1\DotnetProj1\bin\Release  # Adjust this path to your build output directory
             # Add more paths as needed, each on a new line
