@@ -34,12 +34,12 @@ jobs:
           mkdir -p artifacts
           Copy-Item -Path "D:\a\DotnetProj1\DotnetProj1\bin\Release\*" -Destination artifacts\ -Recurse
           Compress-Archive -Path artifacts\ -DestinationPath artifacts.zip
-          dir 
+          dir artifacts
       
       - name: Upload Artifacts
         uses: actions/upload-artifact@v2
         with:
           name: MyProjectArtifacts
           path: |
-            "D:\a\DotnetProj1\DotnetProj1\bin\Release"  # Adjust this path to your build output directory
+            "D:\a\DotnetProj1\DotnetProj1\artifacts.zip"  # Adjust this path to your build output directory
             # Add more paths as needed, each on a new line
