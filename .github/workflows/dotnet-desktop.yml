@@ -22,6 +22,12 @@ jobs:
 
       - name: Build with MSBuild
         run: msbuild /p:Configuration=Release /p:Platform="Any CPU" /verbosity:normal
+
+      - name: Execute Additional Command
+        run: |
+          echo "Executing additional command"
+          dir D:\a\DotnetProj1\DotnetProj1\bin\Release
+          dir D:\a\DotnetProj1\DotnetProj1\bin
       
       - name: Upload Artifacts
         uses: actions/upload-artifact@v2
