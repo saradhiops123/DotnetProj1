@@ -22,3 +22,11 @@ jobs:
 
       - name: Build with MSBuild
         run: msbuild /p:Configuration=Release /p:Platform="Any CPU" /verbosity:normal
+      
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: MyProjectArtifacts
+          path: |
+            D:\a\DotnetProj1\DotnetProj1\bin  # Adjust this path to your build output directory
+            # Add more paths as needed, each on a new line
